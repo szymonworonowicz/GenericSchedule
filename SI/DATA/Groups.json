@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "CountofPerson": 25
+  },
+  {
+    "Id": 2,
+    "CountofPerson": 35
+  },
+  {
+    "Id": 3,
+    "CountofPerson": 15
+  },
+  {
+    "Id": 4,
+    "CountofPerson": 20
+  },
+  {
+    "Id": 5,
+    "CountofPerson": 30
+  }
+]

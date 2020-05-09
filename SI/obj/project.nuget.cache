@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Wd2Gd7M5CH7bAdsBXU6kGrKJuR5+jsk06AY8ftrVoSGA8DkE/x4UEtC91shGCyll1Bd+2sixL5KVoEmJIlO13w==",
+  "dgSpecHash": "uGsIwlUweRmoK+XEhGgpXYXYNnwGYQiCL4ZywkU9M8CPVZuzcHHjBTlH4EB+4eDH8EjGAzj6TAdQv9uDYJVJPw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julia\\source\\repos\\SI\\SI\\SI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Julia\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Julia\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\Julia\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
   ],

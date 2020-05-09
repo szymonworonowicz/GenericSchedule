@@ -1,0 +1,41 @@
+[
+  {
+    "Id": 1,
+    "Teachers": [
+      {
+        "Id": 1,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 2,
+        "Identity": "Andrzej Kowalski"
+
+      }
+
+    ],
+    "Room": {
+      "ClassNumber": 202,
+      "Capacity": 35
+    },
+    "Name": "Matematyka"
+  },
+  {
+    "Id": 2,
+    "Teachers": [
+      {
+        "Id": 2,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 3,
+        "Identity": "Andrzej Kowalski"
+
+      }
+    ],
+    "Room": {
+      "ClassNumber": 203,
+      "Capacity": 25
+    },
+    "Name": "Informatyka"
+  }
+]
