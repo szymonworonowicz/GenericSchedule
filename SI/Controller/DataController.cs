@@ -1,5 +1,4 @@
-﻿using CsvHelper;
-using SI.Models;
+﻿using SI.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,13 +14,11 @@ namespace SI.Controller
     {
         public List<Subject> Subjects { get; private set; } = null;
         public List<Group> Groups { get; private set; } = null;
-        public List<Room> Rooms{ get; private set; } = null;
         public List<LessonTime> Times{ get; private set; } = null;
         public  void GetData()
         {
             Subjects = new List<Subject>();
             Groups = new List<Group>();
-            Rooms = new List<Room>();
             Times = new List<LessonTime>();
             
             using(StreamReader CourseReader = File.OpenText("../../../Data/Courses.json")) 

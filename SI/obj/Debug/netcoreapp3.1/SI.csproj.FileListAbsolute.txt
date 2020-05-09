@@ -9,7 +9,6 @@ C:\Users\Julia\source\repos\SI\SI\bin\Debug\netcoreapp3.1\SI.runtimeconfig.json
 C:\Users\Julia\source\repos\SI\SI\bin\Debug\netcoreapp3.1\SI.runtimeconfig.dev.json
 C:\Users\Julia\source\repos\SI\SI\bin\Debug\netcoreapp3.1\SI.dll
 C:\Users\Julia\source\repos\SI\SI\bin\Debug\netcoreapp3.1\SI.pdb
-C:\Users\Julia\source\repos\SI\SI\bin\Debug\netcoreapp3.1\CsvHelper.dll
 C:\Users\Julia\source\repos\SI\SI\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\Julia\source\repos\SI\SI\obj\Debug\netcoreapp3.1\SI.g.resources
 C:\Users\Julia\source\repos\SI\SI\obj\Debug\netcoreapp3.1\SI.AssemblyInfoInputs.cache
