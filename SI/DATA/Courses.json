@@ -37,5 +37,116 @@
       "Capacity": 25
     },
     "Name": "Informatyka"
+  },
+  {
+    "Id": 3,
+    "Teachers": [
+      {
+        "Id": 3,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 4,
+        "Identity": "Andrzej Kowalski"
+
+      }
+    ],
+    "Room": {
+      "ClassNumber": 102,
+      "Capacity": 30
+    },
+    "Name": "Fizyka"
+  },
+  {
+    "Id": 4,
+    "Teachers": [
+      {
+        "Id": 1,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 3,
+        "Identity": "Andrzej Kowalski"
+
+      },
+      {
+        "Id": 2,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 7,
+        "Identity": "Janusz Nowak"
+      }
+    ],
+    "Room": {
+      "ClassNumber": 23,
+      "Capacity": 25
+    },
+    "Name": "Chemia"
+  },
+  {
+    "Id": 5,
+    "Teachers": [
+      {
+        "Id": 3,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 6,
+        "Identity": "Andrzej Kowalski"
+
+      },
+      {
+        "Id": 2,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 8,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 9,
+        "Identity": "Janusz Nowak"
+      }
+    ],
+    "Room": {
+      "ClassNumber": 301,
+      "Capacity": 40
+    },
+    "Name": "Geografia"
+  },
+  {
+    "Id": 6,
+    "Teachers": [
+      {
+        "Id": 9,
+        "Identity": "Janusz Nowak"
+      },
+      {
+        "Id": 1,
+        "Identity": "Andrzej Kowalski"
+      },
+      {
+        "Id": 6,
+        "Identity": "Andrzej Kowalski"
+      },
+      {
+        "Id": 4,
+        "Identity": "Andrzej Kowalski"
+      },
+      {
+        "Id": 11,
+        "Identity": "Andrzej Kowalski"
+      },
+      {
+        "Id": 12,
+        "Identity": "Andrzej Kowalski"
+      }
+    ],
+    "Room": {
+      "ClassNumber": 12,
+      "Capacity": 27
+    },
+    "Name": "Biologia"
   }
 ]
