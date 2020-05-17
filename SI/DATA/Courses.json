@@ -13,10 +13,6 @@
       }
 
     ],
-    "Room": {
-      "ClassNumber": 202,
-      "Capacity": 35
-    },
     "Name": "Matematyka"
   },
   {
@@ -32,10 +28,6 @@
 
       }
     ],
-    "Room": {
-      "ClassNumber": 203,
-      "Capacity": 25
-    },
     "Name": "Informatyka"
   },
   {
@@ -51,10 +43,6 @@
 
       }
     ],
-    "Room": {
-      "ClassNumber": 102,
-      "Capacity": 30
-    },
     "Name": "Fizyka"
   },
   {
@@ -78,10 +66,6 @@
         "Identity": "Janusz Nowak"
       }
     ],
-    "Room": {
-      "ClassNumber": 23,
-      "Capacity": 25
-    },
     "Name": "Chemia"
   },
   {
@@ -109,10 +93,6 @@
         "Identity": "Janusz Nowak"
       }
     ],
-    "Room": {
-      "ClassNumber": 301,
-      "Capacity": 40
-    },
     "Name": "Geografia"
   },
   {
@@ -143,10 +123,6 @@
         "Identity": "Andrzej Kowalski"
       }
     ],
-    "Room": {
-      "ClassNumber": 12,
-      "Capacity": 27
-    },
     "Name": "Biologia"
   }
 ]

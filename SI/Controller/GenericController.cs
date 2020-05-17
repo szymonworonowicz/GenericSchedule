@@ -18,7 +18,7 @@ namespace SI.Controller
 
         public IEnumerable<List<GenericItem>> Generate(int CountofGeneration, double ProbabilityofCrosover = 0.8, double ProbabilityofMutation = 0.2, int Elitism = 1)
         {
-            int CountofCrosover = (Data.Subjects.Count - Elitism) / 2;
+            int CountofCrosover = (Data.Subjects.Count - Elitism) / 2; // CountofGeneration
             int RangeSum = 0;
             for (int i = 1; i <= CountofGeneration; i++)
                 RangeSum += i;
@@ -35,7 +35,8 @@ namespace SI.Controller
                         Id = j,
                         Group = Data.Groups[rand.Next(0, Data.Groups.Count)],
                         Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)],
-                        Time = Data.Times[rand.Next(0, Data.Subjects.Count)]
+                        Time = Data.Times[rand.Next(0, Data.Times.Count)],
+                        Room = Data.Rooms[rand.Next(0, Data.Rooms.Count)]
                     };
                     item.TeacherId = rand.Next(0, item.Subject.Teachers.Count);
                     ChromosomList.Add(item);
@@ -46,12 +47,12 @@ namespace SI.Controller
 
             for (int i = 0; i < CountofGeneration; i++)
             {
-                var FitnessValue = Fitness(list).ToArray();
+                var FitnessValue = Fitness(list).ToArray(); // przystosowania 
 
                 List<List<GenericItem>> generation = new List<List<GenericItem>>();
 
-                var RangeArray = new int[FitnessValue.Length];
-                var ProbabilityParent = new double[FitnessValue.Length];
+                var RangeArray = new int[FitnessValue.Length]; // tablica rang chromosomu o naym id  - nr miejsca w tablicy
+                var ProbabilityParent = new double[FitnessValue.Length];// prawdopodobienstwo rodzica
 
                 for (int j = 0; j < FitnessValue.Length; j++)
                 {
@@ -61,16 +62,16 @@ namespace SI.Controller
                 {
                     ProbabilityParent[FitnessValue[j].ChromosomID] = ((-RangeArray[FitnessValue[j].ChromosomID] + CountofGeneration + 1) / (double) RangeSum);  
                 }
-
-                double Sum = ProbabilityParent.Sum();
-                ;
-
+                var RandomArray = new double[FitnessValue.Length];
+                RandomArray[0] = ProbabilityParent[0]; // tablica sum czesciowych do losowania zostania rodzicem
+                for (int j = 1; j < FitnessValue.Length; j++)
+                {
+                    RandomArray[j] = RandomArray[j - 1] + ProbabilityParent[j];
+                }
                 for (int j = 0; j < Elitism; j++)
                 {
                     generation.Add(list[FitnessValue[i].ChromosomID]);
                 }
-
-
             }
 
             ;
@@ -90,7 +91,7 @@ namespace SI.Controller
                 {
                     for (int j = i + 1; j < item.Count; j++)
                     {
-                        if (item[i].Group.CountofPerson > item[j].Subject.Room.Capacity)
+                        if (item[i].Group.CountofPerson > item[j].Room.Capacity)
                         {
                             localfitness++;
                         }
