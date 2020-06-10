@@ -13,37 +13,40 @@
       }
 
     ],
-    "Name": "Matematyka"
+    "Name": "Matematyka",
+    "Hours": 5
   },
   {
     "Id": 2,
     "Teachers": [
       {
-        "Id": 2,
+        "Id": 1,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 3,
+        "Id": 2,
         "Identity": "Andrzej Kowalski"
 
       }
     ],
-    "Name": "Informatyka"
+    "Name": "Informatyka",
+    "Hours": 3
   },
   {
     "Id": 3,
     "Teachers": [
       {
-        "Id": 3,
+        "Id": 1,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 4,
+        "Id": 2,
         "Identity": "Andrzej Kowalski"
 
       }
     ],
-    "Name": "Fizyka"
+    "Name": "Fizyka",
+    "Hours": 2
   },
   {
     "Id": 4,
@@ -53,61 +56,63 @@
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 3,
+        "Id": 2,
         "Identity": "Andrzej Kowalski"
 
       },
       {
-        "Id": 2,
+        "Id": 3,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 7,
+        "Id": 4,
         "Identity": "Janusz Nowak"
       }
     ],
-    "Name": "Chemia"
+    "Name": "Chemia",
+    "Hours": 2
   },
   {
     "Id": 5,
     "Teachers": [
       {
-        "Id": 3,
+        "Id": 1,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 6,
+        "Id": 2,
         "Identity": "Andrzej Kowalski"
 
       },
       {
-        "Id": 2,
+        "Id": 3,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 8,
+        "Id": 4,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 9,
+        "Id": 5,
         "Identity": "Janusz Nowak"
       }
     ],
-    "Name": "Geografia"
+    "Name": "Geografia",
+    "Hours": 3
   },
   {
     "Id": 6,
     "Teachers": [
       {
-        "Id": 9,
+        "Id": 1,
         "Identity": "Janusz Nowak"
       },
       {
-        "Id": 1,
+        "Id": 2,
         "Identity": "Andrzej Kowalski"
       },
       {
-        "Id": 6,
+        "Id": 3,
         "Identity": "Andrzej Kowalski"
       },
       {
@@ -115,14 +120,15 @@
         "Identity": "Andrzej Kowalski"
       },
       {
-        "Id": 11,
+        "Id": 5,
         "Identity": "Andrzej Kowalski"
       },
       {
-        "Id": 12,
+        "Id": 6,
         "Identity": "Andrzej Kowalski"
       }
     ],
-    "Name": "Biologia"
+    "Name": "Biologia",
+    "Hours": 2
   }
 ]

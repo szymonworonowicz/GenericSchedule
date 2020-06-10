@@ -59,11 +59,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Piotr\\source\\repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
+      "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
       "projectName": "SI",
-      "projectPath": "C:\\Users\\Piotr\\source\\repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
+      "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
       "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Piotr\\source\\repos\\szymonworonowicz\\GenericSchedule\\SI\\obj\\",
+      "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -110,6 +110,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -118,7 +124,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

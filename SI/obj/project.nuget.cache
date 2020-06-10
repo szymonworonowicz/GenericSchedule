@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uGsIwlUweRmoK+XEhGgpXYXYNnwGYQiCL4ZywkU9M8CPVZuzcHHjBTlH4EB+4eDH8EjGAzj6TAdQv9uDYJVJPw==",
+  "dgSpecHash": "/ch61OsNnsM58K9rr43yxZwPlzuTEEjRBLfL1/APfx2GjnqHs2rEyx9tEppmHfY84zxoISZtiWizwR1v4EuzsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Julia\\source\\repos\\SI\\SI\\SI.csproj",
+  "projectFilePath": "C:\\Users\\Piotr\\source\\repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Julia\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Julia\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Julia\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\Piotr\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
