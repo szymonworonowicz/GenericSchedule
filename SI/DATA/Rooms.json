@@ -1,0 +1,42 @@
+[
+  {
+    "ClassNumber": 202,
+    "Capacity":  35
+  },
+  {
+    "ClassNumber": 201,
+    "Capacity": 35
+  },
+  {
+    "ClassNumber": 203,
+    "Capacity": 35
+  },
+  {
+    "ClassNumber": 204,
+    "Capacity": 30
+  },
+  {
+    "ClassNumber": 205,
+    "Capacity": 40
+  },
+  {
+    "ClassNumber": 206,
+    "Capacity": 32
+  },
+  {
+    "ClassNumber": 207,
+    "Capacity": 45
+  },
+  {
+    "ClassNumber": 208,
+    "Capacity": 50
+  },
+  {
+    "ClassNumber": 209,
+    "Capacity": 40
+  },
+  {
+    "ClassNumber": 210,
+    "Capacity": 45
+  }
+]

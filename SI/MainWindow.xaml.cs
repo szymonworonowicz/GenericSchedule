@@ -1,4 +1,5 @@
 ﻿using SI.Controller;
+using SI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace SI
             InitializeComponent();
 
             Generic = new GenericController();
+            List<List<GenericItem>> item = Generic.Generate(10).ToList();
         }
     }
 }
