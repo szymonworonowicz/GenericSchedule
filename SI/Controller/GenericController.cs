@@ -18,7 +18,7 @@ namespace SI.Controller
             Data.GetData();
         }
 
-        public IEnumerable<List<List<GenericItem>>> Generate(int CountofGeneration, double ProbabilityofCrosover = 0.8, double ProbabilityofMutation = 0.2, int Elitism = 1)
+        public List<List<GenericItem>> Generate(int CountofGeneration, double ProbabilityofCrosover = 0.8, double ProbabilityofMutation = 0.2, int Elitism = 1)
         {
             int CountofCrosover = (Data.Subjects.Count - Elitism) / 2; // CountofGeneration
             int RangeSum = 0;
@@ -178,12 +178,29 @@ namespace SI.Controller
                         }
                     }
 
-                    //doloswanie do pelnej 10
+                    for (int j = generation.Length-1; j < CountofGeneration; j++)
+                    {
+                        var ChromosomList = new List<GenericItem>();
+                        for (int j = 0; j < Data.Subjects.Count; j++)
+                        {
+                            var item = new GenericItem
+                            {
+                                Id = j,
+                                Group = Data.Groups[rand.Next(0, Data.Groups.Count)],
+                                Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)],
+                                Time = Data.Times[rand.Next(0, Data.Times.Count)],
+                                Room = Data.Rooms[rand.Next(0, Data.Rooms.Count)]
+                            };
+                            item.TeacherId = rand.Next(1, item.Subject.Teachers.Count + 1);
+                            ChromosomList.Add(item);
+                        }
+                        generation[k].Add(ChromosomList);
+                    }
                 }
                 list = generation;
             }
 
-            return new List<List<List<GenericItem>>> { list[0], list[1], list[2], list[3], list[4] };
+            return new List<List<GenericItem>> { list[0][0], list[1][0], list[2][0], list[3][0], list[4][0] };
         }
 
         private IEnumerable<GenericFitnessElem> Fitness(List<List<GenericItem>> genericItems)

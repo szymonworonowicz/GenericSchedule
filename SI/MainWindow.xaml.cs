@@ -30,7 +30,7 @@ namespace SI
             InitializeComponent();
 
             Generic = new GenericController();
-            List<List<List<GenericItem>>> list = Generic.Generate(10).ToList();
+            var list = Generic.Generate(10).ToList();
 
             UniformGrid Grid = new UniformGrid();
             
