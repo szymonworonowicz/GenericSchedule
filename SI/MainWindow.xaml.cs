@@ -32,7 +32,6 @@ namespace SI
             Generic = new GenericController();
             var list = Generic.Generate(10).ToList();
 
-            UniformGrid Grid = new UniformGrid();
             
 
             Mon0.ItemsSource = list[0];

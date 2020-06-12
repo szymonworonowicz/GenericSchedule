@@ -67,8 +67,7 @@ namespace SI.Controller
                 for (int k = 0; k < 5; k++)
                 {
 
-                    generation[k] = new List<List<GenericItem>>();
-
+                    generation[k] = new List<List<GenericItem>>();                        
 
                     var FitnessValue = Fitness(list[k]).ToArray(); // przystosowania              
                     var RangeArray = new int[FitnessValue.Length]; // tablica rang chromosomu o danym id  - nr miejsca w tablicy
@@ -178,14 +177,14 @@ namespace SI.Controller
                         }
                     }
 
-                    for (int j = generation.Length-1; j < CountofGeneration; j++)
+                    for (int j = generation[k].Count; j < CountofGeneration; j++)
                     {
                         var ChromosomList = new List<GenericItem>();
-                        for (int j = 0; j < Data.Subjects.Count; j++)
+                        for (int m = 0; m < Data.Subjects.Count; m++)
                         {
                             var item = new GenericItem
                             {
-                                Id = j,
+                                Id = m,
                                 Group = Data.Groups[rand.Next(0, Data.Groups.Count)],
                                 Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)],
                                 Time = Data.Times[rand.Next(0, Data.Times.Count)],
@@ -197,7 +196,7 @@ namespace SI.Controller
                         generation[k].Add(ChromosomList);
                     }
                 }
-                list = generation;
+                list = generation.Clone() as List<List<GenericItem>>[]; //kopia gleboka bo rozwala referencje
             }
 
             return new List<List<GenericItem>> { list[0][0], list[1][0], list[2][0], list[3][0], list[4][0] };
