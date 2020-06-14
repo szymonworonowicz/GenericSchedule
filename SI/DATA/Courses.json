@@ -8,127 +8,123 @@
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
-
-      }
-
+        "Identity": "Andrzej Tomiczek"
+       }
     ],
-    "Name": "Matematyka",
-    "Hours": 5
+    "Name": "Matematyka"
   },
   {
     "Id": 2,
     "Teachers": [
       {
         "Id": 1,
-        "Identity": "Janusz Nowak"
+        "Identity": "Krzysztof Krawczyk"
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Andrzej Majda"
 
       }
     ],
-    "Name": "Informatyka",
-    "Hours": 3
+    "Name": "Informatyka"
   },
   {
     "Id": 3,
     "Teachers": [
       {
         "Id": 1,
-        "Identity": "Janusz Nowak"
+        "Identity": "Beata Kozidrak"
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Mikolaj Kupernik"
 
       }
     ],
-    "Name": "Fizyka",
-    "Hours": 2
+    "Name": "Fizyka"
   },
   {
     "Id": 4,
     "Teachers": [
       {
         "Id": 1,
-        "Identity": "Janusz Nowak"
+        "Identity": "Walter White"
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Pablo Escobar"
 
       },
       {
         "Id": 3,
-        "Identity": "Janusz Nowak"
+        "Identity": "Maria Curie-Sklodowska"
       },
       {
         "Id": 4,
-        "Identity": "Janusz Nowak"
+        "Identity": "Janusz Bimbrownik"
       }
     ],
-    "Name": "Chemia",
-    "Hours": 2
+    "Name": "Chemia"
   },
   {
     "Id": 5,
     "Teachers": [
       {
         "Id": 1,
-        "Identity": "Janusz Nowak"
+        "Identity": "Krzysztof Kolumb"
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Wojciech Cejrowski"
 
       },
       {
         "Id": 3,
-        "Identity": "Janusz Nowak"
+        "Identity": "Odyseusz"
       },
       {
         "Id": 4,
-        "Identity": "Janusz Nowak"
+        "Identity": "Adam Mickiewicz"
       },
       {
         "Id": 5,
-        "Identity": "Janusz Nowak"
+        "Identity": "Edmund Strzelecki"
       }
     ],
-    "Name": "Geografia",
-    "Hours": 3
+    "Name": "Geografia"
   },
   {
     "Id": 6,
     "Teachers": [
       {
         "Id": 1,
-        "Identity": "Janusz Nowak"
+        "Identity": "Krzysztof Krzyszton"
       },
       {
         "Id": 2,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Jakub Burski"
       },
       {
         "Id": 3,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Milena Starska"
       },
       {
         "Id": 4,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Witold Latoszek"
       },
       {
         "Id": 5,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Wiktor Banach"
       },
       {
         "Id": 6,
-        "Identity": "Andrzej Kowalski"
+        "Identity": "Marcin Rozalski"
+      },
+      {
+        "Id": 7,
+        "Identity": "Roman Kidler"
       }
     ],
-    "Name": "Biologia",
-    "Hours": 2
+    "Name": "Biologia"
   }
 ]
