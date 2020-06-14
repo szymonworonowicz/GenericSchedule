@@ -82,3 +82,5 @@ C:\Users\Piotr\Source\Repos\GenericSchedule3\SI\obj\Debug\netcoreapp3.1\SI.Assem
 C:\Users\Piotr\Source\Repos\GenericSchedule3\SI\obj\Debug\netcoreapp3.1\SI.csproj.CoreCompileInputs.cache
 C:\Users\Piotr\Source\Repos\GenericSchedule3\SI\obj\Debug\netcoreapp3.1\SI.csproj.CopyComplete
 C:\Users\Piotr\Source\Repos\GenericSchedule3\SI\obj\Debug\netcoreapp3.1\SI.genruntimeconfig.cache
+C:\Users\Julia\Source\Repos\szymonworonowicz\GenericSchedule\SI\obj\Debug\netcoreapp3.1\Start.g.cs
+C:\Users\Julia\Source\Repos\szymonworonowicz\GenericSchedule\SI\obj\Debug\netcoreapp3.1\Start.baml

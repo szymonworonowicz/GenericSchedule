@@ -25,11 +25,11 @@ namespace SI
     {
         private readonly GenericController Generic;
 
-        public MainWindow()
+        public MainWindow(int CountOfGroup)
         {
             InitializeComponent();
 
-            Generic = new GenericController();
+            Generic = new GenericController(CountOfGroup);
             var list = Generic.Generate(10).ToList();
 
                       

@@ -12,10 +12,14 @@ namespace SI.Controller
     {
         private readonly DataController Data;
 
-        public GenericController()
+
+        private int CountOfGroups;
+
+        public GenericController(int cntofGroups)
         {
             Data = new DataController();
             Data.GetData();
+            this.CountOfGroups = cntofGroups;
         }
 
         public List<List<GenericItem>> Generate(int CountofGeneration, double ProbabilityofCrosover = 0.8, double ProbabilityofMutation = 0.2, int Elitism = 1)
@@ -40,7 +44,6 @@ namespace SI.Controller
                         var item = new GenericItem
                         {
                             Id = j,
-                            Group = Data.Groups[rand.Next(0, Data.Groups.Count)],
                             Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)],
                             Time = Data.Times[rand.Next(0, Data.Times.Count)],
                             Room = Data.Rooms[rand.Next(0, Data.Rooms.Count)]
@@ -54,10 +57,6 @@ namespace SI.Controller
 
             }
 
-
-
-
-
             List<List<GenericItem>>[] generation = new List<List<GenericItem>>[5];
 
 
@@ -67,7 +66,7 @@ namespace SI.Controller
                 for (int k = 0; k < 5; k++)
                 {
 
-                    generation[k] = new List<List<GenericItem>>();                        
+                    generation[k] = new List<List<GenericItem>>();
 
                     var FitnessValue = Fitness(list[k]).ToArray(); // przystosowania              
                     var RangeArray = new int[FitnessValue.Length]; // tablica rang chromosomu o danym id  - nr miejsca w tablicy
@@ -158,7 +157,7 @@ namespace SI.Controller
                         {
                             int typemutation = rand.Next(0, 4);
                             int currentmutation = rand.Next(0, Data.Subjects.Count);
-                            switch(typemutation)
+                            switch (typemutation)
                             {
                                 case 1:
                                     list[k][j][currentmutation].Room = Data.Rooms[rand.Next(0, Data.Rooms.Count)];
@@ -167,7 +166,7 @@ namespace SI.Controller
                                     list[k][j][currentmutation].Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)];
                                     break;
                                 case 3:
-                                    list[k][j][currentmutation].TeacherId = rand.Next(0,list[k][j][currentmutation].Subject.Teachers.Count);
+                                    list[k][j][currentmutation].TeacherId = rand.Next(0, list[k][j][currentmutation].Subject.Teachers.Count);
                                     break;
                                 case 4:
                                     list[k][j][currentmutation].Time = Data.Times[rand.Next(0, Data.Times.Count)];
@@ -185,7 +184,6 @@ namespace SI.Controller
                             var item = new GenericItem
                             {
                                 Id = m,
-                                Group = Data.Groups[rand.Next(0, Data.Groups.Count)],
                                 Subject = Data.Subjects[rand.Next(0, Data.Subjects.Count)],
                                 Time = Data.Times[rand.Next(0, Data.Times.Count)],
                                 Room = Data.Rooms[rand.Next(0, Data.Rooms.Count)]
@@ -200,7 +198,7 @@ namespace SI.Controller
             }
             for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < Data.Subjects.Count-1; j++)
+                for (int j = 0; j < Data.Subjects.Count - 1; j++)
                 {
                     for (int k = 0; k < Data.Subjects.Count - 1; k++)
                     {
@@ -211,8 +209,8 @@ namespace SI.Controller
                             list[i][0][k] = list[i][0][k + 1];
                             list[i][0][k + 1] = temp;
                         }
-                    }                  
-                }             
+                    }
+                }
             }
             for (int i = 0; i < 5; i++)
             {
@@ -239,7 +237,7 @@ namespace SI.Controller
                 {
                     for (int j = i + 1; j < item.Count; j++)
                     {
-                        if (item[i].Group.CountofPerson > item[j].Room.Capacity)
+                        if (CountOfGroups > item[j].Room.Capacity)
                         {
                             localfitness++;
                         }

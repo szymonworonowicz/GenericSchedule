@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SI.Models
 {
-    class Group
+    public class Group
     {
         public int Id { get; set; }
         public int CountofPerson { get; set; }

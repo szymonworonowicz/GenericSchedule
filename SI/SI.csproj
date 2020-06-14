@@ -7,11 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="plan.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DAL\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="plan.jpg" />
   </ItemGroup>
 
 </Project>

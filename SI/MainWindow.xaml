@@ -19,7 +19,6 @@
                             <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
                             <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
                             <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
-                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
                             <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
                         </GridView.Columns>
                     </GridView>
@@ -39,7 +38,6 @@
                             <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
                             <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
                             <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
-                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
                             <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
                         </GridView.Columns>
                     </GridView>
@@ -57,7 +55,6 @@
                             <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
                             <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
                             <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
-                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
                             <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
                         </GridView.Columns>
                     </GridView>
@@ -77,7 +74,6 @@
                             <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
                             <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
                             <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
-                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
                             <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
                         </GridView.Columns>
                     </GridView>
@@ -96,7 +92,6 @@
                             <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
                             <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
                             <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
-                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
                             <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
                         </GridView.Columns>
                     </GridView>
