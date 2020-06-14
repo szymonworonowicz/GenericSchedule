@@ -12,5 +12,6 @@ namespace SI.Models
         public Group Group { get; set; }
         public LessonTime Time { get; set; }
         public Room Room { get; set; }
+        public string TeacherName {get; set;}
     }
 }

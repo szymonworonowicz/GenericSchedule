@@ -7,6 +7,6 @@ namespace SI.Models
     class Teacher
     {
         public int Id { get; set; }
-        public string Identity { get; set; }
+        public string Identity { get; set; }     
     }
 }

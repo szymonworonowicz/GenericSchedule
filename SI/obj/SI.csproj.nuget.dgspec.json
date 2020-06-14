@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {}
+    "C:\\Users\\Piotr\\Source\\Repos\\GenericSchedule3\\SI\\SI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {
+    "C:\\Users\\Piotr\\Source\\Repos\\GenericSchedule3\\SI\\SI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
+        "projectUniqueName": "C:\\Users\\Piotr\\Source\\Repos\\GenericSchedule3\\SI\\SI.csproj",
         "projectName": "SI",
-        "projectPath": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
-        "packagesPath": "C:\\Users\\Julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\obj\\",
+        "projectPath": "C:\\Users\\Piotr\\Source\\Repos\\GenericSchedule3\\SI\\SI.csproj",
+        "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Piotr\\Source\\Repos\\GenericSchedule3\\SI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,12 +60,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
             }
           ],
           "frameworkReferences": {
@@ -71,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

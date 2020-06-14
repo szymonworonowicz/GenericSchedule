@@ -5,318 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
-    <UniformGrid Columns="2">
-        <ScrollViewer>
-            <StackPanel>
-                <TextBlock FontSize="15" FontWeight="Heavy" TextAlignment="Center">Monday</TextBlock>
-                <TextBlock></TextBlock>
-                <TextBlock>Generation 0</TextBlock>
-                <ListView  x:Name="Mon0">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 1</TextBlock>
-                <ListView x:Name="Mon1">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 2</TextBlock>
-                <ListView  x:Name="Mon2">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 3</TextBlock>
-                <ListView  x:Name="Mon3">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 4</TextBlock>
-                <ListView  x:Name="Mon4">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 5</TextBlock>
-                <ListView  x:Name="Mon5">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 6</TextBlock>
-                <ListView  x:Name="Mon6">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 7</TextBlock>
-                <ListView  x:Name="Mon7">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 8</TextBlock>
-                <ListView  x:Name="Mon8">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 9</TextBlock>
-                <ListView  x:Name="Mon9">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </StackPanel>
-        </ScrollViewer>
-        <ScrollViewer>
-            <StackPanel>
-                <TextBlock FontSize="15" FontWeight="Heavy" TextAlignment="Center">Tuesday</TextBlock>
-                <TextBlock>Generation 0</TextBlock>
-                <ListView  x:Name="Tue0">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 1</TextBlock>
-                <ListView x:Name="Tue1">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 2</TextBlock>
-                <ListView  x:Name="Tue2">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 3</TextBlock>
-                <ListView  x:Name="Tue3">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 4</TextBlock>
-                <ListView  x:Name="Tue4">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 5</TextBlock>
-                <ListView  x:Name="Tue5">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 6</TextBlock>
-                <ListView  x:Name="Tue6">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 7</TextBlock>
-                <ListView  x:Name="Tue7">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 8</TextBlock>
-                <ListView  x:Name="Tue8">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <TextBlock>Generation 9</TextBlock>
-                <ListView  x:Name="Tue9">
-                    <ListView.View>
-                        <GridView>
-                            <GridView.Columns>
-                                <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
-                                <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
-                                <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
-                                <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherId}"/>
-                                <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
-                                <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
-                            </GridView.Columns>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </StackPanel>
-        </ScrollViewer>
+        Title="MainWindow" Height="600" Width="1250">
+    <UniformGrid>
+       
+            
+            <StackPanel Margin="5">
+            <TextBlock FontSize="12" FontWeight="Heavy" TextAlignment="Center">Monday</TextBlock>
+            <ListView  x:Name="Mon">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
+                            <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
+                            <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
+                            <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
+                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
+                            <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+        </StackPanel>
+
+        <StackPanel Margin="5">
+            <TextBlock FontSize="12" FontWeight="Heavy" TextAlignment="Center">Tuesday</TextBlock>
+            
+            <ListView x:Name="Tue">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
+                            <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
+                            <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
+                            <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
+                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
+                            <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel Margin="5">
+            <TextBlock FontSize="12" FontWeight="Heavy" TextAlignment="Center">Wednesday</TextBlock>
+            
+            <ListView  x:Name="Wed">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
+                            <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
+                            <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
+                            <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
+                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
+                            <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Margin="5">
+            
+            <TextBlock FontSize="12" FontWeight="Heavy" TextAlignment="Center">Thursday</TextBlock>
+            
+            <ListView  x:Name="Thu">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
+                            <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
+                            <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
+                            <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
+                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
+                            <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel Margin="5">
+            
+            <TextBlock FontSize="12" FontWeight="Heavy" TextAlignment="Center">Friday</TextBlock>
+            
+            <ListView  x:Name="Fri">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="LessonStart" DisplayMemberBinding="{Binding Path=Time.Start}"/>
+                            <GridViewColumn Header="LessonEnd" DisplayMemberBinding="{Binding Path=Time.End}"/>
+                            <GridViewColumn Header="Subject" DisplayMemberBinding="{Binding Path=Subject.Name}"/>
+                            <GridViewColumn Header="Teacher" DisplayMemberBinding="{Binding Path=TeacherName}"/>
+                            <GridViewColumn Header="GroupId" DisplayMemberBinding="{Binding Path=Group.Id}"/>
+                            <GridViewColumn Header="Room" DisplayMemberBinding="{Binding Path=Room.Classnumber}"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </UniformGrid>
 </Window>

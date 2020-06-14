@@ -198,6 +198,31 @@ namespace SI.Controller
                 }
                 list = generation.Clone() as List<List<GenericItem>>[]; //kopia gleboka bo rozwala referencje
             }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < Data.Subjects.Count-1; j++)
+                {
+                    for (int k = 0; k < Data.Subjects.Count - 1; k++)
+                    {
+                        GenericItem temp = new GenericItem();
+                        if (list[i][0][k].Time.Start > list[i][0][k + 1].Time.Start)
+                        {
+                            temp = list[i][0][k];
+                            list[i][0][k] = list[i][0][k + 1];
+                            list[i][0][k + 1] = temp;
+                        }
+                    }                  
+                }             
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < Data.Subjects.Count; j++)
+                {
+                    Teacher temp = new Teacher();
+                    temp = list[i][0][j].Subject.Teachers.Find(x => x.Id == list[i][0][j].TeacherId);
+                    list[i][0][j].TeacherName = temp.Identity;
+                }
+            }
 
             return new List<List<GenericItem>> { list[0][0], list[1][0], list[2][0], list[3][0], list[4][0] };
         }
