@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="plan.jpg" />
+    <Compile Remove="DAL\**" />
+    <EmbeddedResource Remove="DAL\**" />
+    <None Remove="DAL\**" />
+    <Page Remove="DAL\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
+    <None Remove="plan.jpg" />
   </ItemGroup>
 
   <ItemGroup>
