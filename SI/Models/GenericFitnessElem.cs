@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SI.Models
 {
-    class GenericFitnessElem
+    public class GenericFitnessElem
     {
         public int ChromosomID { get; set; }
         public double Fitness { get; set; }

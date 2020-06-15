@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SI.Models
 {
-    class GenericItem
+    public class GenericItem
     {
         public int Id { get; set; }
         public Subject Subject { get; set; }

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
         "projectName": "SI",
-        "projectPath": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
-        "packagesPath": "C:\\Users\\Julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Julia\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\obj\\",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\SI.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\szymonworonowicz\\GenericSchedule\\SI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,16 +56,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -71,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

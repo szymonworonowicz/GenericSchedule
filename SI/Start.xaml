@@ -10,14 +10,14 @@
         <ImageBrush ImageSource="/plan.jpg" Stretch="Fill"/>
     </Window.Background>
     <Grid>
-        <Label Content="Wybierz Grupe" Foreground="Black" HorizontalAlignment="Left" Margin="35,136,0,0" VerticalAlignment="Top" Background="#FFDDDDDD"/>
+        <TextBlock Text="Wybierz Grupe (max 4)" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,122,0,0"  Background="#FFDDDDDD" Height="50" Width="92"/>
         <Button x:Name="Start_btn" Content="Generuj Plan" HorizontalAlignment="Left" Margin="655,351,0,0" VerticalAlignment="Top" Height="48" Width="102" RenderTransformOrigin="2.541,0.595" Click="Start_Click"/>
         <ListView Margin="148,94,493,248" Name="Groups"           
                  VerticalContentAlignment="Top"  
                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                   ScrollViewer.VerticalScrollBarVisibility="Visible">
-                
-        <ListView.View>
+
+            <ListView.View>
                 <GridView>
                     <GridView.Columns>
                         <GridViewColumn Header="Klasa" DisplayMemberBinding="{Binding Path=Id}"></GridViewColumn>

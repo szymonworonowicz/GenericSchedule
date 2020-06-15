@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SI.Models
 {
-    class Room
+    public class Room
     {
         public int Classnumber { get; set; }
         public int Capacity { get; set; }

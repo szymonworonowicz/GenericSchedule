@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SI.Models
 {
-    class Subject
+   public  class Subject
     {
         public int Id { get; set; }
         public List<Teacher> Teachers { get; set; }

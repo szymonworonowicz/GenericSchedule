@@ -1,18 +1,10 @@
 ﻿using Newtonsoft.Json;
+using SI.Controller;
 using SI.Models;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SI
 {
@@ -41,12 +33,24 @@ namespace SI
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             var items = Groups.SelectedItems;
-            
+            GenericController gc;
+            List<List<GenericItem>>[] schedules = new List<List<GenericItem>>[items.Count];
+
             if (items != null)
             {
-                Group item = items[0] as Group;
-                var Window = new MainWindow(item.CountofPerson);
-                Window.Show();
+                for (int i = 0; i < items.Count; i++)
+                {
+                    Group item = items[i] as Group;
+                    gc = new GenericController(item, schedules);
+
+                    schedules[i] = gc.Generate(300).ToList();
+
+                    MainWindow window = new MainWindow(item, schedules[i]);
+
+                    window.Show();
+
+                }
+
                 this.Close();
             }
         }

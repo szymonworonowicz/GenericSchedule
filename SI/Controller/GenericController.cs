@@ -1,10 +1,7 @@
 ﻿using SI.Models;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Windows;
 
 namespace SI.Controller
 {
@@ -13,18 +10,21 @@ namespace SI.Controller
         private readonly DataController Data;
 
 
-        private int CountOfGroups;
+        private readonly Group Group;
+        private readonly List<List<GenericItem>>[] Schedules;
 
-        public GenericController(int cntofGroups)
+        public GenericController(Group group, List<List<GenericItem>>[] schedules)
         {
             Data = new DataController();
             Data.GetData();
-            this.CountOfGroups = cntofGroups;
+            this.Group = group;
+            this.Schedules = schedules;
         }
 
         public List<List<GenericItem>> Generate(int CountofGeneration, double ProbabilityofCrosover = 0.8, double ProbabilityofMutation = 0.2, int Elitism = 1)
         {
             int CountofCrosover = (Data.Subjects.Count - Elitism) / 2; // CountofGeneration
+            bool[] LocalFitness = new bool[5];
             int RangeSum = 0;
             for (int i = 1; i <= CountofGeneration; i++)
                 RangeSum += i;
@@ -68,7 +68,7 @@ namespace SI.Controller
 
                     generation[k] = new List<List<GenericItem>>();
 
-                    var FitnessValue = Fitness(list[k]).ToArray(); // przystosowania              
+                    var FitnessValue = Fitness(list[k], Schedules, k).ToArray(); // przystosowania              
                     var RangeArray = new int[FitnessValue.Length]; // tablica rang chromosomu o danym id  - nr miejsca w tablicy
                     var ProbabilityParent = new double[FitnessValue.Length];// prawdopodobienstwo rodzica
 
@@ -90,11 +90,20 @@ namespace SI.Controller
                     for (int j = 0; j < Elitism; j++)
                     {
                         generation[k].Add(list[k][FitnessValue[j].ChromosomID]);
+                        if (FitnessValue[j].Fitness == 1)
+                        {
+                            LocalFitness[k] = true;
+                        }
                         list[k][FitnessValue[j].ChromosomID] = null;
                     }
 
+                    if (LocalFitness[k] == true)
+                    {
+                        continue;
+                    }
 
                     int crossover = (CountofGeneration - Elitism) / 2;
+                    //krzyzowanie
                     for (int j = 0; j < crossover; j++)
                     {
                         _ = new List<GenericItem>();
@@ -131,6 +140,34 @@ namespace SI.Controller
                             continue;
                         }
 
+                        for (int gi = 0; gi < item.Count - 1; gi++)
+                        {
+                            for (int gl = 0; gl < item.Count - 1; gl++)
+                            {
+                                GenericItem temp = new GenericItem();
+                                if (item[gl].Time.Start > item[gi].Time.Start)
+                                {
+                                    temp = item[gl];
+                                    item[gl] = item[gi];
+                                    item[gi] = temp;
+                                }
+                            }
+                        }
+
+                        for (int gi = 0; gi < item.Count - 1; gi++)
+                        {
+                            for (int gl = 0; gl < item.Count - 1; gl++)
+                            {
+                                GenericItem temp = new GenericItem();
+                                if (crossItem[gl].Time.Start > crossItem[gi].Time.Start)
+                                {
+                                    temp = crossItem[gl];
+                                    crossItem[gl] = crossItem[gi];
+                                    crossItem[gi] = temp;
+                                }
+                            }
+                        }
+
                         int howMany = rand.Next(0, Data.Subjects.Count);
                         //krzyzowanie
                         for (int l = 0; l < howMany; l++)
@@ -155,7 +192,7 @@ namespace SI.Controller
                         double mutation = rand.NextDouble();
                         if (mutation < ProbabilityofMutation && list[k][j] != null)
                         {
-                            int typemutation = rand.Next(0, 4);
+                            int typemutation = rand.Next(0, 3);
                             int currentmutation = rand.Next(0, Data.Subjects.Count);
                             switch (typemutation)
                             {
@@ -167,9 +204,6 @@ namespace SI.Controller
                                     break;
                                 case 3:
                                     list[k][j][currentmutation].TeacherId = rand.Next(0, list[k][j][currentmutation].Subject.Teachers.Count);
-                                    break;
-                                case 4:
-                                    list[k][j][currentmutation].Time = Data.Times[rand.Next(0, Data.Times.Count)];
                                     break;
                             }
                             generation[k].Add(list[k][j]);
@@ -194,7 +228,7 @@ namespace SI.Controller
                         generation[k].Add(ChromosomList);
                     }
                 }
-                list = generation.Clone() as List<List<GenericItem>>[]; //kopia gleboka bo rozwala referencje
+                list = generation.Clone() as List<List<GenericItem>>[];
             }
             for (int i = 0; i < 5; i++)
             {
@@ -212,20 +246,27 @@ namespace SI.Controller
                     }
                 }
             }
+
+            return GetTeacherNames(new List<List<GenericItem>> { list[0][0], list[1][0], list[2][0], list[3][0], list[4][0] });
+        }
+
+
+        private List<List<GenericItem>> GetTeacherNames(List<List<GenericItem>> list)
+        {
+
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < Data.Subjects.Count; j++)
                 {
                     Teacher temp = new Teacher();
-                    temp = list[i][0][j].Subject.Teachers.Find(x => x.Id == list[i][0][j].TeacherId);
-                    list[i][0][j].TeacherName = temp.Identity;
+                    temp = list[i][j].Subject.Teachers.Find(x => x.Id == list[i][j].TeacherId);
+                    list[i][j].TeacherName = temp.Identity;
                 }
             }
 
-            return new List<List<GenericItem>> { list[0][0], list[1][0], list[2][0], list[3][0], list[4][0] };
+            return list;
         }
-
-        private IEnumerable<GenericFitnessElem> Fitness(List<List<GenericItem>> genericItems)
+        private IEnumerable<GenericFitnessElem> Fitness(List<List<GenericItem>> genericItems, List<List<GenericItem>>[] schedules, int day)
         {
             var Fitnesses = new GenericFitnessElem[genericItems.Count];
             int CountofItem = 0;
@@ -237,7 +278,11 @@ namespace SI.Controller
                 {
                     for (int j = i + 1; j < item.Count; j++)
                     {
-                        if (CountOfGroups > item[j].Room.Capacity)
+                        if (Group.CountofPerson > item[j].Room.Capacity)
+                        {
+                            localfitness++;
+                        }
+                        else if ((item[i].Time.Start == item[j].Time.Start && item[i].Time.End == item[j].Time.End))
                         {
                             localfitness++;
                         }
@@ -250,6 +295,31 @@ namespace SI.Controller
                             localfitness++;
                         }
                     }
+                    for (int k = 0; k < schedules.Length && schedules[k] != null; k++)
+                    {
+                        foreach (var schedule in schedules)
+                        {
+                            if (schedule != null)
+                                for (int j = 0; j < item.Count; j++)
+                                {
+                                    if (item[i].Subject.Id == schedule[day][j].Subject.Id && (item[i].Time.Start == schedule[day][j].Time.Start && item[i].Time.End == item[j].Time.End))
+                                    {
+                                        localfitness++;
+                                    }
+                                    else if (item[i].Time.Start == schedule[day][j].Time.Start && item[i].Time.End == item[j].Time.End)
+                                    {
+                                        localfitness++;
+                                    }
+                                    else if (item[i].TeacherId == schedule[day][j].TeacherId && (item[i].Time.Start == schedule[day][j].Time.Start && item[i].Time.End == schedule[day][j].Time.End))
+                                    {
+                                        localfitness++;
+                                    }
+                                }
+                        }
+                    }
+
+
+
                 }
                 Fitnesses[CountofItem] = new GenericFitnessElem
                 {
