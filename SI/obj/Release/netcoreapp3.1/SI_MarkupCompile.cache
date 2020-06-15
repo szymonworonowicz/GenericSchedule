@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Source\Repos\szymonworonowicz\GenericSchedule\SI\obj\Debug\netcoreapp3.1\
+C:\Users\user\Source\Repos\szymonworonowicz\GenericSchedule\SI\obj\Release\netcoreapp3.1\
 SI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1
 C:\Users\user\Source\Repos\szymonworonowicz\GenericSchedule\SI\App.xaml
 22131412466
 
-15-395108048
+14983538694
 1921654412462
 MainWindow.xaml;Start.xaml;
 
-False
+True
 
